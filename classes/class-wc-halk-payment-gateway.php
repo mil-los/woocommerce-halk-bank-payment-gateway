@@ -170,8 +170,13 @@ class WC_Halk_Payment_Gateway extends WC_Payment_Gateway {
 			echo "<tr><td>" . $key ."</td><td>" . $value . "</td></tr>";
 		}
 		
-		natcasesort($postParams);		
+		// uksort($postParams, 'strcasecmp');		
 		
+		usort($postParams, function($a, $b) {
+			return strcasecmp($a["key"], $b["key"]);
+		});
+		
+
 		$hashval = "";					
 		foreach ($postParams as $param){				
 			$paramValue = $_POST[$param];
