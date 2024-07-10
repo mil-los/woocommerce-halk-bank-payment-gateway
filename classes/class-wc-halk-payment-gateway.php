@@ -170,30 +170,25 @@ class WC_Halk_Payment_Gateway extends WC_Payment_Gateway {
 			echo "<tr><td>" . $key ."</td><td>" . $value . "</td></tr>";
 		}
 		
-		// uksort($postParams, 'strcasecmp');		
+		natcasesort($postParams);
 		
-		usort($postParams, function($a, $b) {
-			return strcasecmp($a["key"], $b["key"]);
-		});
-		
-
-		$hashval = "";					
+		$hashval = "";
 		foreach ($postParams as $param){				
 			$paramValue = $_POST[$param];
-			$escapedParamValue = str_replace("|", "\\|", str_replace("\\", "\\\\", $paramValue));	
-				
+			$escapedParamValue = str_replace("|", "\\|", str_replace("\\", "\\\\", str_replace('\\"', '"', $paramValue)));
+			
 			$lowerParam = strtolower($param);
 			if($lowerParam != "hash" && $lowerParam != "encoding" && $lowerParam != "countdown") {
 				$hashval = $hashval . $escapedParamValue . "|";
 			}
 		}
 		
-		$storekey = $this->store_key;
-		$escapedStoreKey = str_replace("|", "\\|", str_replace("\\", "\\\\", $storeKey));	
+		$storeKey = $this->store_key;
+		$escapedStoreKey = str_replace("|", "\\|", str_replace("\\", "\\\\", $storeKey));
 		$hashval = $hashval . $escapedStoreKey;
 		
-		$calculatedHashValue = hash('sha512', $hashval);  
-		$actualHash = base64_encode (pack('H*',$calculatedHashValue));
+        $calculatedHashValue = hash('sha512', $hashval); 
+		$actualHash = base64_encode(pack('H*', $calculatedHashValue));
 
 		$retrievedHash = $_POST["HASH"];
 
