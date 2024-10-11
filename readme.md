@@ -1,13 +1,12 @@
 === Halk Bank Payment Gateway For Woocommerce with working hash ver3 ===
 
 - Developer: mil-los
-- Contributors: m1tk00, Webpigment
+- Contributors: m1tk00
 - Tags: woocommerce, payment gateway, gateway, manual payment, halk, halkbank, nestpay
 - Requires at least: 3.8
 - Tested up to: 6.4.3
 - Requires WooCommerce at least: 3.2
 - Tested WooCommerce up to: 8.4.0
-- Stable Tag: 1.2.1
 - License: GPLv3
 - Requires PHP: 5.2.4
 - License URI: http://www.gnu.org/licenses/gpl-3.0.html

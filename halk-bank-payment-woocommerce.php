@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: WooCommerce Halkbank Payment Gateway - not functional after 15.03.2024
- * Plugin URI: https://wordpress.org/plugins/woo-halkbank-payment-gateway/
- * Description: Implements the Halk bank payment gateway.
- * Author: Webpigment
- * Author URI: https://www.webpigment.com/
- * Version: 1.2.1
+ * Plugin Name: WooCommerce Halkbank Payment Gateway
+ * Plugin URI: https://github.com/mil-los/woocommerce-halk-bank-payment-gateway
+ * Description: Implements the Halk bank payment gateway with working hash ver3.
+ * Author: mil-los
+ * Author URI: https://github.com/mil-los/
+ * Version: 1.3
  * Text Domain: halk-payment-gateway-for-woocommerce
  * Domain Path: /i18n/languages/
  *
@@ -13,9 +13,9 @@
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  *
  * @package   WC-halk-Gateway
- * @author    Mitko Kockovski
+ * @author    mil-los
  * @category  Admin
- * @copyright Copyright (c) Mitko Kockovski
+ * @copyright Copyright (c) mil-los
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 defined( 'ABSPATH' ) or exit;

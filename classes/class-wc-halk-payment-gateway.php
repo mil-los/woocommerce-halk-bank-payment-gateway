@@ -6,9 +6,9 @@
  *
  * @class 		WC_Halk_Payment_Gateway
  * @extends		WC_Payment_Gateway
- * @version		1.2
+ * @version		1.3
  * @package		WooCommerce/Classes/Payment
- * @author 		Mitko Kockovski
+ * @author 		mil-los
  */
 class WC_Halk_Payment_Gateway extends WC_Payment_Gateway {
 	/**
